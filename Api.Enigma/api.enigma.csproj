@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Enigma.Models\Enigma.Models.csproj" />
+     <ProjectReference Include="..\MissionLib\MissionLib.csproj" />
   </ItemGroup>
+
 </Project>

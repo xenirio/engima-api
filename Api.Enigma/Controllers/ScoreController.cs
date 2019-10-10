@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Enigma.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Api.Enigma.JsonModels;
 
 namespace Api.Enigma.Controllers
 {
@@ -14,7 +14,7 @@ namespace Api.Enigma.Controllers
     {
         [Route("Submit")]
         [HttpPost]
-        public IActionResult SubmitScore([FromBody]ScoreViewModel score)
+        public IActionResult SubmitScore([FromBody]Score score)
         {
             return Ok(score);
         }
@@ -23,7 +23,7 @@ namespace Api.Enigma.Controllers
         [HttpGet]
         public IActionResult GetRank()
         {
-            return Ok(new RankViewModel());
+            return Ok(new Rank());
         }
     }
 

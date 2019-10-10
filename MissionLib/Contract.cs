@@ -6,6 +6,6 @@ namespace MissionLib
 {
     public interface IMissionGenerator
     {
-        MissionInfo Generate(int major, int minor, int difficulty);
+        MissionInfo Generate(int numTick, int numRotor, int numRelation, int numMove);
     }
 }
