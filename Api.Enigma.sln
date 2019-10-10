@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Enigma", "Api.Enigma\Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissionLib", "MissionLib\MissionLib.csproj", "{64E4F421-DB2A-49EF-B727-01F739D99BF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Repositories", "Enigma.Repositories\Enigma.Repositories.csproj", "{CE568EE5-28BF-4D45-9AAC-40BA313208CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Models", "Enigma.Models\Enigma.Models.csproj", "{C16DCF41-BDDA-40E5-A005-B3DECF3A6AA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{64E4F421-DB2A-49EF-B727-01F739D99BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E4F421-DB2A-49EF-B727-01F739D99BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64E4F421-DB2A-49EF-B727-01F739D99BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE568EE5-28BF-4D45-9AAC-40BA313208CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE568EE5-28BF-4D45-9AAC-40BA313208CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE568EE5-28BF-4D45-9AAC-40BA313208CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE568EE5-28BF-4D45-9AAC-40BA313208CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C16DCF41-BDDA-40E5-A005-B3DECF3A6AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16DCF41-BDDA-40E5-A005-B3DECF3A6AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16DCF41-BDDA-40E5-A005-B3DECF3A6AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16DCF41-BDDA-40E5-A005-B3DECF3A6AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
