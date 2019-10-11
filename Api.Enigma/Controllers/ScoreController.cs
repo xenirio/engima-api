@@ -61,7 +61,7 @@ namespace Api.Enigma.Controllers
                     });
                 }
 
-                return Ok(ranking);
+                return Ok(ranking.OrderByDescending(q => q.Score));
             }
             catch (Exception ex)
             {
