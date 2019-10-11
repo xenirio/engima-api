@@ -41,8 +41,8 @@ namespace Api.Enigma.Controllers
             {
                 var difficulty = ((level - 1) * 5 + sublevel) + 1;
 
-                var numTick = Math.Max(2, difficulty / 4);
-                var numRotor = Math.Min(12, (2 + difficulty / 3));
+                var numTick = level + 1;
+                var numRotor = sublevel + 1;
                 var numMove = Math.Max(4, difficulty / 3);
                 var numRelation = Math.Max(numRotor - 1, Convert.ToInt32(Math.Floor(numRotor * (numRotor - 1) * Math.Min(1.0, (double)difficulty / 25) * 0.6)));
 
