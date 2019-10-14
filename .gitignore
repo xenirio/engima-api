@@ -3,3 +3,5 @@ bin
 obj
 *.user
 Api.Enigma/enigmadb.db
+.vscode/tasks.json
+.vscode/launch.json
