@@ -13,5 +13,7 @@ namespace Api.Enigma.Repositories.Interfaces
         bool IsScoreAlreadySubmitted(string playerName, int level);
 
         List<ScoreEntity> GetAllScore();
+
+        ScoreEntity GetScore(string player);
     }
 }

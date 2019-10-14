@@ -29,7 +29,16 @@ namespace Api.Enigma.Controllers
                 // The score should be submit by levelม it should unique by player and level
                 if (_scoreRepository.IsScoreAlreadySubmitted(score.Player, score.Level))
                 {
-                    _scoreRepository.UpdateScore(score.Player, score.Level, score.Time, score.Step);
+                    var newScore = new ScoreEntity()
+                    {
+                        Player = score.Player,
+                        Level = score.Level,
+                        Time = score.Time,
+                        Step = score.Step
+                    };
+                    var currentScore = _scoreRepository.GetScore(score.Player);
+                    if (newScore.Score > currentScore.Score)
+                        _scoreRepository.UpdateScore(score.Player, score.Level, score.Time, score.Step);
                 }
                 else
                 {
@@ -41,7 +50,7 @@ namespace Api.Enigma.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            
+
         }
 
         [Route("Rank")]
@@ -67,9 +76,9 @@ namespace Api.Enigma.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            
+
         }
     }
 
-   
+
 }

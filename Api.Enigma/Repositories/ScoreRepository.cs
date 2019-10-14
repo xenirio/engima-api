@@ -35,6 +35,14 @@ namespace Api.Enigma.Repositories
             }
         }
 
+        public ScoreEntity GetScore(string player)
+        {
+            using(var dbContext = new EnigmaDataContext())
+            {
+                return dbContext.Scores.Where(s => s.Player.ToLower() == player.ToLower()).OrderByDescending(s => s.Score).FirstOrDefault();
+            }
+        }
+
         public bool IsScoreAlreadySubmitted(string playerName, int level)
         {
             using (var dbContext = new EnigmaDataContext())
