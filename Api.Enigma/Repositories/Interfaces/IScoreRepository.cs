@@ -15,5 +15,7 @@ namespace Api.Enigma.Repositories.Interfaces
         List<ScoreEntity> GetAllScore();
 
         ScoreEntity GetScore(string player);
+
+        void CleanUpScore();
     }
 }

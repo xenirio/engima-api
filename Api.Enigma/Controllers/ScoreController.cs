@@ -78,6 +78,21 @@ namespace Api.Enigma.Controllers
             }
 
         }
+
+        [Route("CleanUpScore")]
+        [HttpPost]
+        public IActionResult CleanUpScore()
+        {
+            try
+            {
+                _scoreRepository.CleanUpScore();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 
 

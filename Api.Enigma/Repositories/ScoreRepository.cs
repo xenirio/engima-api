@@ -27,6 +27,16 @@ namespace Api.Enigma.Repositories
 
         }
 
+        public void CleanUpScore()
+        {
+            using (var dbContext = new EnigmaDataContext())
+            {
+                var scores = dbContext.Scores;
+                dbContext.RemoveRange(scores);
+                dbContext.SaveChanges();
+            }
+        }
+
         public List<ScoreEntity> GetAllScore()
         {
             using(var dbContext = new EnigmaDataContext())
