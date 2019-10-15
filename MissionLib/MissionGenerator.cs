@@ -38,10 +38,18 @@ namespace MissionLib
             var relations = relationPools.Take(numRelation).Concat(exceptions).ToArray();
             var relationTable = createRelationTable(relations, numRotor);
 
-            var moves = createRandomArray(numMove, numRotor);
-            var currentState = Enumerable.Repeat(0, numRotor).ToArray();
+            int[] moves;
+            int[] currentState;
 
-            simulate(currentState, moves, relationTable, numTick, Direction.BACKWARD);
+            while (true)
+            {
+                moves = createRandomArray(numMove, numRotor);
+                currentState = Enumerable.Repeat(0, numRotor).ToArray();
+                simulate(currentState, moves, relationTable, numTick, Direction.BACKWARD);
+
+                if (currentState.Any(x => x != 0))
+                    break;
+            }
 
             var rotors = createRotorObjects(relationTable, currentState, numRotor);
             return new MissionInfo()
