@@ -5,3 +5,4 @@ obj
 Api.Enigma/enigmadb.db
 .vscode/tasks.json
 .vscode/launch.json
+*.pubxml

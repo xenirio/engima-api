@@ -40,6 +40,7 @@ namespace MissionLib
 
             int[] moves;
             int[] currentState;
+            int maxRetry = 0;
 
             while (true)
             {
@@ -49,6 +50,14 @@ namespace MissionLib
 
                 if (currentState.Any(x => x != 0))
                     break;
+                else
+                    maxRetry++;
+
+                if (maxRetry == 2)
+                {
+                    numMove--;
+                    maxRetry = 0;
+                }
             }
 
             var rotors = createRotorObjects(relationTable, currentState, numRotor);
